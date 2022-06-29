@@ -57,6 +57,8 @@
 				renderer.outputEncoding = THREE.sRGBEncoding;
 				container.appendChild( renderer.domElement );
 
+				
+
 				new GLTFLoader()
 					.setPath('models/gltf/carro/')
 					.load('scene.gltf', function (gltf){
@@ -76,6 +78,8 @@
 						gltf.scene.rotation.y = 3.1;
 						render();
 					});
+
+				
 
 				const controls = new OrbitControls( camera, renderer.domElement );
 				controls.addEventListener( 'change', render ); // use if there is no animation loop
